@@ -1,6 +1,6 @@
 app-id: com.neogamelab.neostation
 runtime: org.freedesktop.Platform
-runtime-version: '23.08'
+runtime-version: '25.08'
 sdk: org.freedesktop.Sdk
 command: neostation
 
@@ -22,7 +22,6 @@ finish-args:
   - --filesystem=xdg-config/citron:rw
   - --filesystem=xdg-data/Ryujinx:rw
   - --filesystem=xdg-config/Ryujinx:rw
-  - --filesystem=~/.var/app/org.yuzu_emu.yuzu:rw
   - --persist=.local/share/neostation
   - --talk-name=org.freedesktop.secrets
   - --talk-name=org.freedesktop.portal.OpenURI
