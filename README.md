@@ -9,7 +9,6 @@ flatpak install flathub com.ngl.neostation
 ```
 
 ## Repository
-Source code: https://github.com/NeoGameLab/neostation-app (private)
 Binary releases: https://github.com/NeoGameLab/neostation-release
 
 ## License
