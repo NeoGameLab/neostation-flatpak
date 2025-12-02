@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <id>com.ngl.neostation</id>
+  <name>NeoStation</name>
+  <summary>Modern frontend for retro gaming with cloud sync</summary>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>LicenseRef-proprietary=Neo Game Lab, Inc</project_license>
+  <description>
+    <p>NeoStation is a modern, user-centric frontend for retro gaming that prioritizes exceptional UX/UI design and seamless cross-platform compatibility.</p>
+    <p>Features:</p>
+    <ul>
+      <li>Deep RetroArch integration for multiple retro systems</li>
+      <li>Nintendo Switch emulator support (Eden, Citron, Ryujinx)</li>
+      <li>NeoSync: Cloud-based save synchronization across all devices</li>
+      <li>Intuitive interface with gamepad and touch support</li>
+      <li>Performance optimized for retro hardware</li>
+    </ul>
+  </description>
+  <launchable type="desktop-id">com.ngl.neostation.desktop</launchable>
+  <releases>
+    <release version="0.0.17" date="2025-12-02"/>
+  </releases>
+  <content_rating type="oars-1.1" />
+</component>
