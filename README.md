@@ -1,15 +1,6 @@
 # NeoStation Flatpak
 
-Official Flatpak manifest for NeoStation - Modern retro gaming frontend
+Official Flatpak manifest for NeoStation
 
-## Installation
-
-```bash
-flatpak install flathub com.ngl.neostation
-```
-
-## Repository
-Binary releases: https://github.com/NeoGameLab/neostation-release
-
-## License
-LicenseRef-proprietary - Neo Game Lab, Inc
+- Website: https://neogamelab.com
+- Release binaries: https://github.com/NeoGameLab/neostation-release

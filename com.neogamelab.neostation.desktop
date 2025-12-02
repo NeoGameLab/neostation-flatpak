@@ -2,7 +2,7 @@
 Name=NeoStation
 Comment=Modern frontend for retro gaming with cloud sync
 Exec=neostation
-Icon=com.ngl.neostation
+Icon=com.neogamelab.neostation
 Terminal=false
 Type=Application
 Categories=Game;Emulator;
