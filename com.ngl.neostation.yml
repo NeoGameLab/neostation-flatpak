@@ -1,0 +1,52 @@
+# com.ngl.neostation.yml
+app-id: com.ngl.neostation
+runtime: org.freedesktop.Platform
+runtime-version: '25.08'
+sdk: org.freedesktop.Sdk
+command: neostation
+
+finish-args:
+  - --share=network
+  - --share=ipc
+  - --socket=x11
+  - --socket=wayland
+  - --socket=pulseaudio
+  - --device=dri
+  - --device=all
+  - --filesystem=home
+  - --filesystem=xdg-data/ROMs:ro
+  - --filesystem=xdg-config/retroarch:rw
+  - --filesystem=~/.var/app/org.libretro.RetroArch/config/retroarch:rw
+  - --filesystem=xdg-data/eden:rw
+  - --filesystem=xdg-config/eden:rw
+  - --filesystem=xdg-data/citron:rw
+  - --filesystem=xdg-config/citron:rw
+  - --filesystem=xdg-data/Ryujinx:rw
+  - --filesystem=xdg-config/Ryujinx:rw
+  - --persist=.local/share/neostation
+  - --talk-name=org.freedesktop.secrets
+  - --talk-name=org.freedesktop.portal.OpenURI
+
+modules:
+  # ... (todas las dependencias previas: libsecret, sqlite, mpv, etc) ...
+  
+  # NeoStation app
+  - name: neostation
+    buildsystem: simple
+    build-commands:
+      - install -Dm755 neostation /app/bin/neostation
+      - cp -r lib /app/bin/
+      - cp -r data /app/bin/
+      - install -Dm644 com.ngl.neostation.png /app/share/icons/hicolor/256x256/apps/com.ngl.neostation.png
+      - install -Dm644 com.ngl.neostation.desktop /app/share/applications/com.ngl.neostation.desktop
+      - install -Dm644 com.ngl.neostation.metainfo.xml /app/share/metainfo/com.ngl.neostation.metainfo.xml
+    sources:
+      - type: archive
+        url: https://github.com/NeoGameLab/neostation-release/releases/download/v0.0.17/neostation-linux-0.0.17.tar.gz
+        sha256: cc5d6e6a95a1bebb3892404aae1f18cbec731b84d42f1630be3e3b5326d807a7
+      - type: file
+        path: com.ngl.neostation.png
+      - type: file
+        path: com.ngl.neostation.desktop
+      - type: file
+        path: com.ngl.neostation.metainfo.xml
